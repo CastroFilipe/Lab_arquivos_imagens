@@ -14,15 +14,10 @@ import com.filipe.model.Midia;
 @Controller
 public class MidiaController {
 	
-	private static String UPLOADED_FOLDER = "C://imagens";
+	//private static String UPLOADED_FOLDER = "C://imagens";
 
 	@Autowired
 	private MidiaManager midiaManager;
-	
-	@GetMapping({"/", "/home"})
-	public String home() {
-		return "home";
-	}
 	
 	@GetMapping("/{id}")
 	public ResponseEntity<Midia> buscarPorId(Long id){
