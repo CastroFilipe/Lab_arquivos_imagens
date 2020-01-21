@@ -2,21 +2,13 @@ package com.filipe.controller;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestParam;
-import org.springframework.web.multipart.MultipartFile;
 
 @Controller
 public class HomeController {
 
 	// abrir pagina home
-	@GetMapping({ "/", "/home" })
+	@GetMapping()
 	public String home() {
 		return "home";
-	}
-	
-	@RequestMapping(value = "/upload")
-	public String handleFormUpload(@RequestParam("file") MultipartFile file) {
-		return "";
 	}
 }

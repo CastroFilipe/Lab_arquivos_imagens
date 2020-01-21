@@ -8,6 +8,7 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.Lob;
 import javax.persistence.SequenceGenerator;
 import javax.persistence.Table;
 import javax.persistence.UniqueConstraint;
@@ -25,6 +26,7 @@ public class Midia implements Serializable {
 	@GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "SEQ_MIDIA")
 	private Long id;
 	
+	@Lob
 	@Column(name = "IM_ARQUIVO_MIDIA", nullable = false)
 	private Blob arquivoMidia;
 	
